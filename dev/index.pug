@@ -1,0 +1,26 @@
+doctype html
+
+html
+  head
+    meta(charset='utf-8')
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    meta(http-equiv='X-UA-Compatible', content='IE=10;chrome=1')
+    meta(name='description', content='網站描述')
+    meta(name='keywords', content='網站,關鍵字')
+    title 網站標題
+    link(rel='icon', href='images/favicon.ico')
+    link(rel='stylesheet', href='css/vender.min.css')
+    link(rel='stylesheet', href='css/layout.min.css')
+  body
+    .wrapper-bg
+      // header
+      include _include_header.pug
+      // content
+      .wrapper
+        .smile
+      // footer
+      include _include_footer.pug
+  script(src='js/browser-polyfill-5.8.34.min.js')
+  script(src='js/jquery-1.10.min.js')
+  script(src='js/chunk.js')
+  script(src='js/app.js')

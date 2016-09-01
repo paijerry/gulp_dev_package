@@ -1,0 +1,13 @@
+node_modules/
+npm-debug.log
+*.log
+*.map
+*.rar
+*.zip
+*.7z
+.sass-cache
+build/
+lib/sync_ftp_20
+lib/sync_ftp_50
+*.sh
+.tern-project
