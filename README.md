@@ -84,7 +84,7 @@ webpack設定檔
 1. 複製資料夾，並改名為專案名稱
 2. 修改「package.json」內容（name, version, description, author）
 3. 使用「npm i」安裝package.json中相關的依賴套件。
-4. 依照專案存放位置修改「config/myPath.js」中的「websitesRoot」參數，一般來說是不用修改，但如果路徑是「websites/xxx/mt_project/」就必須把「..」改為「../..」以此類推。
+4. 依需求調整「config/myPath.js」。
 
 ## 開發
 
@@ -98,12 +98,12 @@ webpack設定檔
 
 ## 引入JavsSCript套件
 
-參考package.json中的script.plugins設定
+參考config/myPath.js中的script.plugins設定
 ```javascript
 module.exports.fileType = {
 ...
   plugins: [
-    `${pluginsPath}/jquery-1.10.min.js`,
+    `${vendorRoot}/browser-polyfill-5.8.34.min.js`,
     '${pluginsPath}/some_js.js',
   ],
 ...
