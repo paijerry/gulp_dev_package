@@ -4,6 +4,10 @@
     "es6": true,
     "browser": true
   },
+  "globals": {
+    "$": true,
+    "jquery": true
+    },
   "extends": [
     "airbnb-base"
   ],
