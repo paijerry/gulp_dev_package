@@ -13,6 +13,13 @@ const config = {
     filename: '[name].js',
   },
   module: {
+    preLoaders: [
+      {
+        test: /\.js?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'eslint',
+      },
+    ],
     loaders: [
       {
         test: /\.js$/,
