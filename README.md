@@ -1,5 +1,5 @@
 
-Gulp Basic Sample說明
+Gulp Dev Package
 ---
 
 # 資料夾結構
@@ -14,7 +14,7 @@ Gulp Basic Sample說明
   - *.pug
 - node_modules/
 - vendor/
-- .babelrc
+- .sass-lint.yml
 - .eslintrc
 - gulpfile.js
 - package.json
@@ -52,11 +52,11 @@ pug放置處（html樣板語法）
 **vendor/**
 第三方工具放置處
 
-**.babelrc**
-支援JavaScript es6+語法的設定檔
+**.sass-lint.yml**
+sass語法規則檢查設定檔
 
 **.eslintrc**
-語法規則檢查設定檔
+JavaScript語法規則檢查設定檔
 
 **gulpfile.js**
 Gulp設定檔
@@ -70,7 +70,7 @@ webpack設定檔
 # 了解開發包的使用技術
 - Gulp（Task Runner）
 - Webpack（Just for packaging JavaScript）
-- es6 +的module以及種種概念
+- JavaScript es6+
 
 # 開發過程會用到的技術
 - pug / jade（jade is pug's old name）
@@ -86,17 +86,17 @@ webpack設定檔
 3. 使用「npm i」安裝package.json中相關的依賴套件。
 4. 依需求調整「config/myPath.js」。
 
-## 開發
+## 開發（development）
 
 執行「npm run dev」運行開發環境進行開發。（中斷使用「ctl + c」）
 
-## 完成
+## 完成（production）
 
-完成開發後，使用「npm run build」進行production的打包。
+完成開發後，使用「npm run build」進行打包。
 
 *指令「npm run build, npm run dev」設定放在「package.json」的scripts*
 
-## 引入JavsSCript套件
+## 引入JavaScript套件
 
 參考config/myPath.js中的script.plugins設定
 ```javascript
@@ -118,9 +118,9 @@ module.exports.fileType = {
 // -------------------------------------
 //   Plugins
 // -------------------------------------
-@import '../../../plugins/font-awesome/scss/font-awesome';
-@import '../../../plugins/path/to/you_scss_or_css';
+@import '<path/to/you_scss_or_css>';
 ```
+
 ### 圖片
 
 ```javascript
